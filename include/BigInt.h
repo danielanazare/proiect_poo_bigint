@@ -4,6 +4,8 @@
 #include <cstring> /// strlen
 #include <cstdlib> /// abs
 #include <limits>
+#include <conio.h>
+
 
 class BigInt
 {
@@ -16,6 +18,7 @@ public:
     BigInt(const char string[]);
     BigInt(const BigInt & that);
     ~BigInt();
+
 
     bool isPositive;
 
@@ -34,7 +37,7 @@ public:
 
 
     friend std::ostream & operator<<(std::ostream & os, const BigInt & obj);
-    friend std::istream & operator>>(std::istream & is, const BigInt & obj);
+    friend std::istream & operator>>(std::istream & is, BigInt & obj);
 
     void paritate();
     void palindrom();

@@ -1,7 +1,6 @@
 #include "BigInt.h"
 
 
-///Constructor fara parametri: sir nul
 BigInt::BigInt()
 {
     init();
@@ -115,9 +114,35 @@ std::ostream & operator<<(std::ostream & os, const BigInt & obj)
     return os;
 }
 
-std::istream & operator>>(std::istream & is, const BigInt & obj)
+std::istream & operator>>(std::istream & is, BigInt & obj)
 {
-    // exemplu
+/**
+    char *p = NULL, ch;
+    int i = 0;
+    while((is>>ch) && (ch != '\n'))
+    {
+        p = (char*) realloc (p, (i + 2) * sizeof(char));
+        *(p + i) = ch;
+        i++;
+    }
+
+    p =(char *) realloc(p, (i + 1) * sizeof(char));
+    obj.length = i + 1;
+    *(p + obj.length)  = '\0';
+    obj.number = p;
+
+    return is;
+    */
+
+    char aux[100]; ///just for testing, will increase later
+    is>>aux;
+
+    obj.length = strlen(aux);
+    obj.number = (char *)&aux;
+
+    return is;
+
+
 }
 
 ///Supraincarcarea operatorului =, atat pentru atribuirea unui sir de caractere, a unui int sau a unui alt obiect
@@ -130,12 +155,13 @@ BigInt & BigInt::operator=(const BigInt & that)
     return *this;
 }
 
-///
+///Suprascriere operator +
 BigInt BigInt::operator+(const BigInt & that) const
 {
     return BigInt(*this) += that;
 }
 
+/// Suprascriere operator -
 BigInt BigInt::operator-(const BigInt & that) const
 {
     return BigInt(*this) -= that;
@@ -361,6 +387,7 @@ int BigInt::digitSum()
     int sum = 0;
     for(int i = 0; i < length; i++)
         sum += *(number + i) - '0';
+    std::cout << "Suma cifrelor numarului " << *this << " = " << sum;
     return sum;
 }
 

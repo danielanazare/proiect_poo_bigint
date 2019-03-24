@@ -6,47 +6,33 @@ using namespace std;
 int main()
 {
 
-   /* int x = -1234;
-    char s[] = "46587";
-    BigInt myint(s);
-    std::cout << myint << std::endl;
-    */
+    BigInt a, b, c, d;
 
-    /*BigInt myint, myint2, myint3, myint4;
+    a = 1234;
+    b = "-789";
+    c = "45";
+    d = -99;
 
-    myint = "12051999";
-    myint2 = myint;
-    cout << myint << " " << myint2 << endl;
+    std::cout << a << " + " << c << " = " << a + c << std::endl; ///pozitiv + pozitiv
+    std::cout << a << " + " << b << " = " << a + b << std::endl; /// pozitiv + negativ
+    std::cout << b << " + " << d << " = " << b + d << std::endl; ///negativ + negativ
 
-    myint3 = 30111998;
-    myint4 = myint3;
-    cout << myint3 << " " << myint4 << endl;
-    */
+    BigInt e, f;
+    e = "12321";
+    f = 12347321;
+    e.palindrom();
+    f.palindrom();
 
-   /* BigInt myint;
-    cin >> myint;
-    cout << myint;*/
+    int sum = e.digitSum();
+    //cout<<sum;
 
-    //char p[] = "21489327490832";
-    //p = "124334543";
-    //cin>>p;
-    //cout<<p<<endl;
-    /*BigInt myint;
-    cin >> myint;
-    cout << myint;*/
-
-
-    /*BigInt myint1, myint2;
-    myint1 = "12321";
-    myint2 = 1234321;
-    myint1.palindrom();
-    myint2.palindrom();
-    int x = myint2.digitSum();
-    cout<<x;*/
-
+   /**
+   * Inca nu functioneaza
     BigInt x;
     cin >> x;
     cout << x;
+    */
+
 
     return 0;
 }

@@ -1,14 +1,15 @@
 # depslib dependency file v1.0
-1553457874 source:c:\users\donut\desktop\fmi\i-sem2\poo\bigint\main.cpp
+1553462947 source:c:\users\donut\desktop\fmi\i-sem2\poo\bigint\main.cpp
 	<iostream>
 	"BigInt.h"
 
-1553456446 source:c:\users\donut\desktop\fmi\i-sem2\poo\bigint\src\bigint.cpp
+1553463384 source:c:\users\donut\desktop\fmi\i-sem2\poo\bigint\src\bigint.cpp
 	"BigInt.h"
 
-1553456797 c:\users\donut\desktop\fmi\i-sem2\poo\bigint\include\bigint.h
+1553462673 c:\users\donut\desktop\fmi\i-sem2\poo\bigint\include\bigint.h
 	<iostream>
 	<cstring>
 	<cstdlib>
 	<limits>
+	<conio.h>
 
