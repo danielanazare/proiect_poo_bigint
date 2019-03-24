@@ -117,7 +117,7 @@ std::ostream & operator<<(std::ostream & os, const BigInt & obj)
 
 std::istream & operator>>(std::istream & is, const BigInt & obj)
 {
-
+    // exemplu
 }
 
 ///Supraincarcarea operatorului =, atat pentru atribuirea unui sir de caractere, a unui int sau a unui alt obiect
